@@ -11,13 +11,16 @@
   "dependencies": {
     "@nextui-org/modal": "^2.0.39",
     "@nextui-org/react": "^2.4.6",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.21",
+    "embla-carousel-react": "^8.3.0",
+    "framer-motion": "^11.11.7",
     "lucide-react": "^0.427.0",
     "lungelozulu": "file:",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.13.1",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

@@ -1,23 +1,36 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import SectionTitle from '@/components/ui/SectionTitle';
 
 type Props = {};
 
 const About = (props: Props) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   return (
     <div id="about" className="bg-[#0a0000]">
       <SectionTitle title="About Me" />
-      <section id="about" className="container mx-auto">
-        <div className="text-center">
-          <p>I am Lungelo Zulu (known to many as Smile/Smiles)</p>
+      <section className="container flex items-center justify-center mx-auto">
+        <div className="text-center lg:w-[70vw]">
+          <p data-aos="fade-up" data-aos-delay="100">
+            I am Lungelo Zulu (known to many as Smile/Smiles)
+          </p>
           <br />
-          <p>
+          <p data-aos="fade-up" data-aos-delay="200">
             A tall Zulu boy who was born in August of &apos;96 in Dundee,
             Kwa-Zulu Natal, but raised by the grimy streets of Katlehong –
             &quot;the far East&quot; they say.
           </p>
           <br />
-          <p>
+          <p data-aos="fade-up" data-aos-delay="300">
             His writing experience stems from 2015 with the establishment of his
             Tumblr blog www.smileythevisionaire.tumblr.com where he wrote music
             reviews, event reviews, as well as artist & brand profiles. Prior to
@@ -37,7 +50,7 @@ const About = (props: Props) => {
             majoring in Rugby, Beauty, Art and Student Relations.
           </p>
           <br />
-          <p>
+          <p data-aos="fade-up" data-aos-delay="400">
             Word on the street has it that Lungelo is returning fully to his
             initial duties at HIP Daily Media Works as Creative Director & Head
             of Content and has a possible docuseries in the pipelines. The first
@@ -45,7 +58,7 @@ const About = (props: Props) => {
             TV on YouTube.
           </p>
           <br />
-          <p>
+          <p data-aos="fade-up" data-aos-delay="500">
             A tall Zulu boy who was born in August of &apos;96 in Dundee,
             Kwa-Zulu Natal, but raised by the grimy streets of Katlehong &quot;
             &quot;the far East&quot; they say.
