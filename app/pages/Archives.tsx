@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import SectionTitle from '@/components/ui/SectionTitle';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
-const Archives = () => {
+const Archives: React.FC = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,10 +15,10 @@ const Archives = () => {
     });
   }, []);
 
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState<boolean>(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-  const images = [
+  const images: string[] = [
     'radio.jpg',
     'bluegray.jpg',
     'wearhouz.jpg',
@@ -38,20 +38,20 @@ const Archives = () => {
     'sunday.jpg',
   ];
 
-  const openLightbox = (index) => {
+  const openLightbox = (index: number): void => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = (): void => {
     setLightboxOpen(false);
   };
 
-  const nextImage = () => {
+  const nextImage = (): void => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const prevImage = () => {
+  const prevImage = (): void => {
     setCurrentImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
